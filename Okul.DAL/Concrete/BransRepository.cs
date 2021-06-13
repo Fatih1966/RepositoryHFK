@@ -10,10 +10,6 @@ namespace Okul.DAL.Concrete
 {
     public class BransRepository:BaseRepository<Brans>,IBransRepository
     {
-        public BransRepository():base()
-        {
-
-        }
 
         public List<Ogretmen> OgretmenListesiGetir(int Id)
         {

@@ -13,12 +13,6 @@ namespace Okul.DAL.Concrete
     
     {
 
-
-        public SinifRepository():base()
-        {
-         
-        }
-
         public List<Ogrenci> SinifListesiGetir(int id)
         {
 
