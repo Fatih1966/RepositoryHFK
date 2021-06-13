@@ -1,0 +1,44 @@
+﻿@model ICollection<Okul.Entity.Models.Ogretmen>
+
+<h3>Ogretmen Listesi</h3>
+
+<hr>
+
+<a asp-action="Create" class="btn btn-success">Ekle</a>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Adi</td>
+                <td>Soyadi</td>
+                <td>TCKimlik</td>
+                <td>Email</td>
+                <td>CepTelefonu</td>
+                <td>BransAdi</td>
+                <td>Maas</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Ad</td>
+                <td>@item.Soyad</td>
+                <td>@item.TCKimlik</td>
+                <td>@item.Email</td>
+                <td>@item.CepTelefonu</td>
+                <td>@item.Brans.BransAdi</td>
+                <td>@item.Maas</td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-primary">Guncelle</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

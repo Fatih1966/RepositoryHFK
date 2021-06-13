@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Okul.BL\Okul.BL.csproj" />
+    <ProjectReference Include="..\Okul.DAL\Okul.DAL.csproj" />
+    <ProjectReference Include="..\Okul.Entity\Okul.Entity.csproj" />
+  </ItemGroup>
+
+</Project>

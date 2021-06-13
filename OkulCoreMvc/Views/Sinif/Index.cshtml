@@ -1,0 +1,35 @@
+﻿@model ICollection<Okul.Entity.Models.Sinif>
+
+<h3>Sinif Listesi</h3>
+
+<hr>
+
+<a asp-action="Create" class="btn btn-success">Ekle</a>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Sinif Id</td>
+                <td>Sinif Adi</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.SinifAdi</td>
+                    
+                    <td>
+                        <a asp-action="Detay" asp-route-id="@item.Id" class="btn btn-primary">Detay</a>
+
+                        <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-primary">Guncelle</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

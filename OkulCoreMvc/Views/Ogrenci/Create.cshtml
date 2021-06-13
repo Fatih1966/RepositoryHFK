@@ -1,0 +1,98 @@
+﻿@model OkulCoreMvc.Models.DTO.OgrenciCreateDTO
+@*@model Okul.Entity.Models.Ogrenci*@
+
+
+    <h3>Yeni Ogrenci Ekle</h3>
+
+    <form asp-action="Create" method="post" class="form-group">
+
+       @*<span asp-validation-for=""></span>*@
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.OgrenciNo" class="form-control"></label>
+                </div>
+                <div class="col md-8">
+                    <input asp-for="@Model.OgrenciNo" class="form-control" />
+                    <span asp-validation-for="@Model.OgrenciNo" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.Ad" class="form-control"></label>
+                </div>
+                <div class="col-md-8">
+                    <input asp-for="@Model.Ad" class="form-control" />
+                    <span asp-validation-for="@Model.Ad" class="text-danger"></span>
+                </div>
+                </div>
+            </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.Soyad" class="form-control"></label>
+                </div>
+                <div class="col-md-8">
+                    <input asp-for="@Model.Soyad" class="form-control" />
+                    <span asp-validation-for="@Model.Soyad"class="text-danger" ></span>
+                </div>
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.Email" class="form-control"></label>
+                </div>
+                <div class="col-md-8">
+                    <input asp-for="@Model.Email" class="form-control" />
+                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.TCKimlik" class="form-control"></label>
+                </div>
+                <div class="col-md-8">
+                    <input asp-for="@Model.TCKimlik" class="form-control" />
+                    <span asp-validation-for="@Model.TCKimlik" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+            <div class="col-md-4">
+                <label asp-for="@Model.CepTelefonu" class="form-control"></label>
+            </div>
+            <div class="col-md-8">
+                <input asp-for="@Model.CepTelefonu" class="form-control" />
+                <span asp-validation-for="@Model.CepTelefonu" class="text-danger" ></span>
+            </div>
+                </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label asp-for="@Model.SinifId" class="form-control"></label>
+                </div>
+                <div class="col-md-8">
+                    <select asp-for="@Model.SinifId" asp-items="@Model.SinifListesi">
+                    <option>Bir Sinif Seciniz</option>
+                    </select>
+
+                    <span asp-validation-for="@Model.SinifId" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <input type="submit" value="Ekle" class="btn btn-success" />
+                <a asp-action="Index" asp-controller="Ogrenci" class="btn btn-primary">Geri Don</a>
+
+            </div>
+        </div>
+</form>
